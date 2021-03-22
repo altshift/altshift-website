@@ -26,6 +26,10 @@ body {
     background-color: $darkColor;
 }
 
+strong {
+    font-weight: $fontWeightBold;
+}
+
 .center-column-container {
     position: relative;
     width: 960px;
@@ -151,6 +155,25 @@ body {
 
 .game-links a {
     color: $lightColor;
+}
+
+.game-footer .game-links {
+    padding: 0px 20px;
+    line-height: 54px;
+}
+
+.game-footer .game-links a {
+    font-size: 16px;
+}
+
+.game-footer .game-links img {
+    margin-left: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.game-footer .game-links img:first-child {
+    margin-left: 0;
 }
 
 .shadowed {
