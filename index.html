@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/assets/style.css" />
     </head>
     <body>
-        <div id="main-container">
+        <div class="center-column-container">
             <div id="header">
                 <div id="header-socials">
                     <div>
@@ -24,8 +24,11 @@
                 <div class="subtitle section-header">{{ site.subtitle }}</div>
                 <div class="paragraph">{{ site.header-text }}</div>
             </div>
+        </div>
 
-            {% include games.html %}
+        {% include games.html %}
+        
+        <div class="center-column-container">
             {% include team.html %}
             {% include contact.html %}
 

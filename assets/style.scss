@@ -10,15 +10,24 @@ $darkColor: #202020;
 $darkerColor: #171717;
 $darkestColor: #101010;
 
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightBold: 700;
+
 * {
     font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    margin: 0;
 }
 
 body {
     background-color: $darkColor;
 }
 
-#main-container {
+.center-column-container {
+    position: relative;
     width: 960px;
     margin: 0 auto;
 }
@@ -34,7 +43,7 @@ body {
 }
 
 #header .paragraph {
-    font-weight: 300;
+    font-weight: $fontWeightLight;
     font-size: 18px;
     color: $lightColor;
     text-align: center;
@@ -53,7 +62,7 @@ body {
 }
 
 .section-header {
-    font-weight: 300;
+    font-weight: $fontWeightLight;
     font-size: 36px;
     color: $grayerTextColor;
     text-align: center;
@@ -79,6 +88,71 @@ body {
     margin-left: 10px;
 }
 
+.game-container {
+    position: relative;
+    height: 400px;
+    margin: 60px 0px;
+    margin-bottom: 120px;
+    background-color: $darkestColor;
+}
+
+.game-container:last-of-type {
+    margin-bottom: 60px;
+}
+
+.game-footer {
+    position: absolute;
+    height: 54px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: $darkerColor;
+}
+
+.game-container .center-column-container {
+    padding-left: 320px;
+    box-sizing: border-box;
+}
+
+.game-splash {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    height: 480px;
+    width: 320px;
+    z-index: 1000;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5)
+}
+
+.game-data {
+    padding: 20px;
+}
+
+.game-title {
+    color: $lightColor;
+    font-weight: $fontWeightBold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.game-description {
+    color: $lightColor;
+    font-weight: $fontWeightLight;
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.game-links {
+    color: $lightColor;
+    font-size: 18px;
+    font-weight: $fontWeightRegular;
+}
+
+.game-links a {
+    color: $lightColor;
+}
+
 .shadowed {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5) inset, 0px 1px 1px rgba(255, 255, 255, 0.25);
 }
@@ -98,11 +172,11 @@ body {
 }
 
 .team-member-name {
-    font-weight: 700;
+    font-weight: $fontWeightBold;
 }
 
 .team-member-title {
-    font-weight: 300;
+    font-weight: $fontWeightLight;
 }
 
 .team-member-socials {
@@ -119,7 +193,7 @@ body {
 #footer {
     margin-top: 40px;
     margin-bottom: 10px;
-    font-weight: 400;
+    font-weight: $fontWeightRegular;
     font-size: 20px;
     color: $grayerTextColor;
     text-align: center;

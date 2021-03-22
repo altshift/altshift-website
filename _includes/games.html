@@ -1,6 +1,24 @@
 {% capture section_content %}
     {% for game in site.games %}
-        <p>{{ game.name }}</p>
+    <div class="game-container shadowed">
+        <div class="center-column-container">
+            <img class="game-splash" src="/assets/images/games/{{ game.splash }}.png" />
+
+            <div class="game-data">
+                <div class="game-title">{{ game.name }}</div>
+                <div class="game-description">{{ game.content }}</div>
+                <div class="game-links">
+                    <a href="{{ game.url }}" target="_blank">{{ game.short_url }}</a> / <a href="#" target="_blank">Presskit</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-footer">
+            <div class="center-column-container">
+                Toto
+            </div>
+        </div>
+    </div>
     {% endfor %}
 {% endcapture %}
 
