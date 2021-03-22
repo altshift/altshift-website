@@ -1,0 +1,138 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+$lightColor: #ffffff;
+$buttonBackgroundColor: #69b884;
+$grayerTextColor: #878787;
+$darkColor: #202020;
+$darkerColor: #171717;
+$darkestColor: #101010;
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: $darkColor;
+}
+
+#main-container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#header {
+    position: relative;
+    margin-top: 80px;
+}
+
+#header .subtitle {
+    text-align: left;
+    margin-top: 0;
+}
+
+#header .paragraph {
+    font-weight: 300;
+    font-size: 18px;
+    color: $lightColor;
+    text-align: center;
+    margin: 40px 20px;
+}
+
+#header-socials {
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+.header-social-icon {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.section-header {
+    font-weight: 300;
+    font-size: 36px;
+    color: $grayerTextColor;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.section-separator-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.section-separator-item {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    background-color: $darkestColor;
+    border-radius: 6px;
+}
+
+.section-separator-item:first-of-type {
+    margin-left: 10px;
+}
+
+.shadowed {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5) inset, 0px 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+#team-section {
+    text-align: center;
+}
+
+.team-member {
+    position: relative;
+    display: inline-block;
+    min-width: 180px;
+    margin: 10px 20px;
+    color: $lightColor;
+    text-align: left;
+    font-size: 12px;
+}
+
+.team-member-name {
+    font-weight: 700;
+}
+
+.team-member-title {
+    font-weight: 300;
+}
+
+.team-member-socials {
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    text-align: right;
+}
+
+.team-member-social-icon {
+    width: 24px;
+}
+
+#footer {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: $grayerTextColor;
+    text-align: center;
+}
+
+#footer a {
+    color: $grayerTextColor;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

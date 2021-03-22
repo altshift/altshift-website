@@ -1,0 +1,7 @@
+{% capture section_content %}
+    {% for game in site.games %}
+        <p>{{ game.name }}</p>
+    {% endfor %}
+{% endcapture %}
+
+{% include section.html title="Games" id="games" content=section_content %}
