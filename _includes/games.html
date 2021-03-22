@@ -13,6 +13,17 @@
             </div>
         </div>
 
+        <div class="game-store-container">
+            <div class="center-column-container">
+                Disponible sur :
+                <div class="game-stores">
+                {% for store in game.stores %}
+                    <a href="{{ store.url }}" target="_blank"><img src="/assets/images/stores/{{ store.icon }}.png" alt="{{ store.name }}" /></a>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
         <div class="game-footer">
             <div class="center-column-container">
                 <div class="game-links">
