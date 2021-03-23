@@ -2,7 +2,7 @@
     {% for game in site.games %}
     <div class="game-container shadowed">
         <div class="center-column-container">
-            <img class="game-splash" src="/assets/images/games/{{ game.splash }}.png" />
+            <img class="game-splash" src="{{ site.baseurl }}/assets/images/games/{{ game.splash }}.png" />
 
             <div class="game-data">
                 <div class="game-title">{{ game.name }}</div>
@@ -18,7 +18,7 @@
                 Disponible sur :
                 <div class="game-stores">
                 {% for store in game.stores %}
-                    <a href="{{ store.url }}" target="_blank"><img src="/assets/images/stores/{{ store.icon }}.png" alt="{{ store.name }}" /></a>
+                    <a href="{{ store.url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/stores/{{ store.icon }}.png" alt="{{ store.name }}" /></a>
                 {% endfor %}
                 </div>
             </div>
@@ -28,7 +28,7 @@
             <div class="center-column-container">
                 <div class="game-links">
                 {% for link in game.links %}
-                    <img src="/assets/images/icons/{{ link.icon }}.png"> 
+                    <img src="{{ site.baseurl }}/assets/images/icons/{{ link.icon }}.png"> 
                     {% if link.url %}<a href="{{ link.url }}">{% endif %}
                     {{ link.name }}
                     {% if link.soon %}/ <strong>Coming Soon</strong>{% endif %}

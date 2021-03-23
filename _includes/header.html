@@ -1,13 +1,13 @@
 <div id="header">
     <div id="header-socials">
         <div>
-            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="/assets/images/twitter-48px.png" alt="Twitter" class="header-social-icon" /></a>
-            <a href="https://fb.me/{{ site.facebook_username }}" target="_blank"><img src="/assets/images/facebook-48px.png" alt="Facebook" class="header-social-icon" /></a>
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/twitter-48px.png" alt="Twitter" class="header-social-icon" /></a>
+            <a href="https://fb.me/{{ site.facebook_username }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/facebook-48px.png" alt="Facebook" class="header-social-icon" /></a>
         </div>
-        <a href="mailto:{{ site.email }}"><img src="/assets/images/letter-48px.png" alt="Email" class="header-social-icon" /></a>
+        <a href="mailto:{{ site.email }}"><img src="{{ site.baseurl }}/assets/images/letter-48px.png" alt="Email" class="header-social-icon" /></a>
     </div>
 
-    <a href="/"><img src="/assets/images/logo.png" alt="{{ site.title }}" /></a>
+    <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="{{ site.title }}" /></a>
     <div class="subtitle">{{ site.subtitle }}</div>
     {% if include.with_header_text %}
     <div class="paragraph">{{ site.header-text }}</div>
