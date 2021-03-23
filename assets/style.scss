@@ -5,7 +5,7 @@
 
 $lightColor: #ffffff;
 $buttonBackgroundColor: #69b884;
-$grayerTextColor: #878787;
+$grayTextColor: #878787;
 $darkColor: #202020;
 $darkerColor: #171717;
 $darkestColor: #101010;
@@ -68,7 +68,7 @@ strong {
 .section-header {
     font-weight: $fontWeightLight;
     font-size: 36px;
-    color: $grayerTextColor;
+    color: $grayTextColor;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -245,10 +245,28 @@ strong {
     margin-bottom: 10px;
     font-weight: $fontWeightRegular;
     font-size: 20px;
-    color: $grayerTextColor;
+    color: $grayTextColor;
     text-align: center;
 }
 
 #footer a {
-    color: $grayerTextColor;
+    color: $grayTextColor;
+}
+
+#footer-socials {
+    text-align: center;
+}
+
+.footer-social-icon {
+    height: 48px;
+    width: 48px;
+    margin: 0 5px;
+}
+
+#newsletter-container {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: $fontWeightLight;
+    color: $grayTextColor;
 }

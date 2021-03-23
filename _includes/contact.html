@@ -1,5 +1,13 @@
 {% capture section_content %}
-    Contacts here
+    <div id="footer-socials">
+        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="/assets/images/twitter-48px.png" alt="Twitter" class="footer-social-icon" /></a>
+        <a href="https://fb.me/{{ site.facebook_username }}" target="_blank"><img src="/assets/images/facebook-48px.png" alt="Facebook" class="footer-social-icon" /></a>
+        <a href="mailto:{{ site.email }}"><img src="/assets/images/letter-48px.png" alt="Email" class="footer-social-icon" /></a>
+    </div>
+
+    <div id="newsletter-container">
+        <p>Want some news about Alt Shift games updates and new releases?</p>
+    </div>
 {% endcapture %}
 
 {% include section.html title="Contact" id="contact" content=section_content %}
