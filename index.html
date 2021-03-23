@@ -3,37 +3,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <title>{{ site.title }} | {{ site.subtitle }}</title>
-        <meta name="keywords" content="{{ site.keywords | join: ", "}}" />
-        <meta name="description" content="{{ site.description }}" />
-        <link rel="stylesheet" href="/assets/style.css" />
+        {% include html_head.html %}
     </head>
     <body>
         <div class="center-column-container">
-            <div id="header">
-                <div id="header-socials">
-                    <div>
-                        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="/assets/images/twitter-48px.png" alt="Twitter" class="header-social-icon" /></a>
-                        <a href="https://fb.me/{{ site.facebook_username }}" target="_blank"><img src="/assets/images/facebook-48px.png" alt="Facebook" class="header-social-icon" /></a>
-                    </div>
-                    <a href="mailto:{{ site.email }}"><img src="/assets/images/letter-48px.png" alt="Email" class="header-social-icon" /></a>
-                </div>
-
-                <img src="/assets/images/logo.png" alt="{{ site.title }}" />
-                <div class="subtitle section-header">{{ site.subtitle }}</div>
-                <div class="paragraph">{{ site.header-text }}</div>
-            </div>
+            {% include header.html with_header_text="1" %}
         </div>
 
         {% include games.html %}
         
         <div class="center-column-container">
             {% include team.html %}
-            {% include contact.html %}
+            {% include contact.html with_newsletter="1" %}
 
             <div id="footer">
-                <a href="#">Terms of Service</a> | <a href="#">Legal Notice</a>
+                <a href="/privacy-policy/">Privacy Policy & Legal Notice</a>
             </div>
         </div>
     </body>
