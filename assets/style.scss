@@ -190,7 +190,7 @@ h1,
 
 .game-links {
   color: $lightColor;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: $fontWeightRegular;
 }
 
@@ -201,10 +201,6 @@ h1,
 .game-footer .game-links {
   padding: 0px 20px;
   line-height: 54px;
-}
-
-.game-footer .game-links a {
-  font-size: 16px;
 }
 
 .game-footer .game-links img {
@@ -285,7 +281,7 @@ h1,
   text-align: center;
 }
 
-#footer a {
+#footer a, #newsletter-container p a {
   color: $grayTextColor;
 }
 
