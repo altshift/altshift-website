@@ -27,7 +27,12 @@ keywords:
   - tata
 baseurl: "/altshift-website" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-email: contact@altshift.fr
+
+exploded_email:
+  - "altshift"
+  - "contact"
+  - "fr"
+
 twitter_username: AltShift_Games
 facebook_username: altshift.fr
 
