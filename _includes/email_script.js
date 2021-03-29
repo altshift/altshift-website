@@ -8,5 +8,4 @@ window.onload = function() {
             location.href = rightEmail;
         });
     }
-    console.log('test');
 };
