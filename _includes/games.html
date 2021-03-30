@@ -2,7 +2,9 @@
     {% for game in site.games %}
     <div class="game-container shadowed">
         <div class="center-column-container">
-            <img class="game-splash" src="{{ site.baseurl }}/assets/images/games/{{ game.splash }}.png" />
+            <div class="game-splash">
+                <a href="{{ game.site_url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/games/{{ game.splash }}.png" /></a>
+            </div>
 
             <div class="game-data">
                 <div class="game-title">{{ game.name }}</div>
