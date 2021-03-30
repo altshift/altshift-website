@@ -1,21 +1,23 @@
 {% capture section_content %}
     {% for member in site.team_members %}
         <div class="team-member">
-            <div class="team-member-socials">
-                {% if member.twitter_handle %}
-                <a href="https://twitter.com/{{ member.twitter_handle }}" target="_blank">
-                    <img class="team-member-social-icon" src="{{ site.baseurl }}/assets/images/twitter-48px.png" alt="Twitter">
-                </a>
-                {% endif %}
-                {% if member.linkedin_username %}
-                <a href="https://www.linkedin.com/in/{{ member.linkedin_username }}" target="_blank">
-                    <img class="team-member-social-icon" src="{{ site.baseurl }}/assets/images/linkedin-48px.png" alt="LinkedIn">
-                </a>
-                {% endif %}
-            </div>
+            <div class="team-member-identity">
+                <div class="team-member-name">{{ member.name }}</div>
+                <div class="team-member-title">{{ member.title }}</div>
 
-            <div class="team-member-name">{{ member.name }}</div>
-            <div class="team-member-title">{{ member.title }}</div>
+                <div class="team-member-socials">
+                    {% if member.twitter_handle %}
+                    <a href="https://twitter.com/{{ member.twitter_handle }}" target="_blank">
+                        <img class="team-member-social-icon" src="{{ site.baseurl }}/assets/images/twitter-48px.png" alt="Twitter">
+                    </a>
+                    {% endif %}
+                    {% if member.linkedin_username %}
+                    <a href="https://www.linkedin.com/in/{{ member.linkedin_username }}" target="_blank">
+                        <img class="team-member-social-icon" src="{{ site.baseurl }}/assets/images/linkedin-48px.png" alt="LinkedIn">
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     {% endfor %}
 {% endcapture %}

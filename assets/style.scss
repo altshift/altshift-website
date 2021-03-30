@@ -252,11 +252,16 @@ h1,
 .team-member {
   position: relative;
   display: inline-block;
-  min-width: 180px;
+  min-width: 160px;
   margin: 10px 20px;
   color: $lightColor;
   text-align: left;
   font-size: 12px;
+}
+
+.team-member-identity {
+  position: relative;
+  display: inline-block;
 }
 
 .team-member-name {
@@ -269,9 +274,11 @@ h1,
 
 .team-member-socials {
   position: absolute;
-  right: 0px;
+  left: 100%;
   top: 2px;
   text-align: right;
+  white-space: nowrap;
+  margin-left: 10px;
 }
 
 .team-member-social-icon {
