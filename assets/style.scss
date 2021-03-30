@@ -62,6 +62,11 @@ strong {
   text-align: right;
 }
 
+#header-socials a {
+  font-weight: $fontWeightLight;
+  color: $grayTextColor;
+}
+
 .header-social-icon {
   margin-bottom: 10px;
   margin-left: 10px;
