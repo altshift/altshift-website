@@ -1,0 +1,17 @@
+{% capture section_content %}
+    <div id="partners">
+    {% for partner in site.partners %}
+        <a href="{{ partner.site_url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/partners/{{ partner.image }}.png" alt="{{ partner.name }}" /></a>
+    {% endfor %}
+    </div>
+
+    <div id="investors">
+    {% for member in site.team_members %}
+        {% if member.partner %}
+            {% include team_member.html member=member %}
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endcapture %}
+
+{% include section.html title="Partners" id="partners" content=section_content %}

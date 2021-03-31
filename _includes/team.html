@@ -1,10 +1,11 @@
 {% capture section_content %}
     {% for member in site.team_members %}
-        {% if member.title != "Investor" %}
+        {% unless member.partner %}
             {% include team_member.html member=member %}
-        {% endif %}
+        {% endunless %}
     {% endfor %}
 
+    {% comment %}
     <div id="investors">
     {% for member in site.team_members %}
         {% if member.title == "Investor" %}
@@ -12,6 +13,7 @@
         {% endif %}
     {% endfor %}
     </div>
+    {% endcomment %}
 {% endcapture %}
 
 {% include section.html title="Team" id="team" content=section_content %}

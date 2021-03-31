@@ -297,7 +297,8 @@ h1,
     0px 1px 1px rgba(255, 255, 255, 0.25);
 }
 
-#team-section {
+#team-section,
+#partners-section {
   text-align: center;
 }
 
@@ -337,8 +338,23 @@ h1,
   width: 24px;
 }
 
+#partners {
+  margin-top: 40px;
+}
+
+#partners img {
+  height: 72px;
+  opacity: 0.25;
+  margin: 0 10px;
+}
+
+#partners img:hover {
+  opacity: 1;
+}
+
 #investors {
   margin-top: 40px;
+  opacity: 0.4;
 }
 
 #footer {
