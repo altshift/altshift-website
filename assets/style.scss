@@ -303,6 +303,15 @@ h1,
   text-align: center;
 }
 
+#team-section p {
+  margin-top: 40px;
+}
+
+#team-section p a {
+  font-weight: $fontWeightRegular;
+  color: $lightColor;
+}
+
 .team-member {
   position: relative;
   display: inline-block;
