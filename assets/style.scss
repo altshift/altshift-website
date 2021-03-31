@@ -305,11 +305,11 @@ h1,
 .team-member {
   position: relative;
   display: inline-block;
-  min-width: 160px;
+  min-width: 190px;
   margin: 10px 20px;
   color: $lightColor;
   text-align: left;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .team-member-identity {
@@ -328,7 +328,7 @@ h1,
 .team-member-socials {
   position: absolute;
   left: 100%;
-  top: 2px;
+  top: 7px;
   text-align: right;
   white-space: nowrap;
   margin-left: 10px;
