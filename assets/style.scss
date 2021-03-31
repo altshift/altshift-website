@@ -48,12 +48,26 @@ strong {
   margin-top: 0;
 }
 
-#header .paragraph {
+#header p {
   font-weight: $fontWeightLight;
   font-size: 18px;
   color: $lightColor;
   text-align: center;
-  margin: 40px 20px;
+  margin: 20px;
+}
+
+#header p:first-of-type {
+  margin-top: 40px;
+}
+
+#header p:last-of-type {
+  margin-bottom: 40px;
+}
+
+#header p#presskit a {
+  color: $lightColor;
+  font-size: 20px;
+  font-weight: $fontWeightBold;
 }
 
 #header-socials {
