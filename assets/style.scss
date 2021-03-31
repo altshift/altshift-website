@@ -101,6 +101,7 @@ a#header-sign-up {
   line-height: 48px;
   padding: 0 48px 0 20px;
   font-size: 20px;
+  transition: all 0.23s ease-in-out 0s;
 }
 
 a#header-sign-up:hover {
@@ -346,6 +347,7 @@ h1,
   height: 72px;
   opacity: 0.25;
   margin: 0 10px;
+  transition: all 0.23s ease-in-out 0s;
 }
 
 #partners img:hover {
