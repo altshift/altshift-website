@@ -113,12 +113,17 @@ a#header-sign-up:hover {
   top: 14px;
 }
 
+#page-not-found-section p,
 #privacy-policy-section p,
 #privacy-policy-section ul {
-    text-align: justify;
-    color: $grayTextColor;
-    font-weight: $fontWeightRegular;
-    margin: 5px 80px;
+  text-align: justify;
+  color: $grayTextColor;
+  font-weight: $fontWeightRegular;
+  margin: 5px 80px;
+}
+
+#page-not-found-section p {
+  text-align: center;
 }
 
 h1,
@@ -137,15 +142,15 @@ h1 {
 }
 
 h2 {
-    font-size: 29px;
+  font-size: 29px;
 }
 
 h3 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 h4 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 h1,
@@ -345,7 +350,8 @@ h1,
   text-align: center;
 }
 
-#footer a, #newsletter-container p a {
+#footer a,
+#newsletter-container p a {
   color: $grayTextColor;
 }
 
