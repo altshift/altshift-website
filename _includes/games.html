@@ -3,11 +3,11 @@
     <div class="game-container shadowed">
         <div class="center-column-container">
             <div class="game-splash">
-                <a href="{{ game.site_url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/games/{{ game.splash }}.png" /></a>
+                <a href="{{ game.site_url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/games/{{ game.splash }}.png" alt="{{ game.short_name }} poster" /></a>
             </div>
 
             <div class="game-data">
-                <div class="game-title">{{ game.name }}</div>
+                <h2 class="game-title">{{ game.name }}</h2>
                 <div class="game-description">{{ game.content }}</div>
                 <div class="game-links">
                     <a href="{{ game.site_url }}" target="_blank">{{ game.short_url }}</a> / <a href="{{ game.presskit_url }}" target="_blank">Presskit</a>
@@ -20,7 +20,16 @@
                 Disponible sur :
                 <div class="game-stores">
                 {% for store in game.stores %}
-                    <a href="{{ store.url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/stores/{{ store.icon }}.png" alt="{{ store.name }}" /></a>
+                    {% assign store_prefix = " the " %}
+                    {% if store.name == "Google Play" %}
+                        {% assign store_prefix = "" %}
+                    {% elsif store.name == "Steam" %}
+                        {% assign store_prefix = "" %}
+                    {% elsif store.name == "GOG" %}
+                        {% assign store_prefix = "" %}
+                    {% endif %}
+                    {% assign store_alt = "Get " | append: game.short_name | append: " on " | append: store_prefix | append: store.name %}
+                    <a href="{{ store.url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/stores/{{ store.icon }}.png" alt="{{ store_alt }}" /></a>
                 {% endfor %}
                 </div>
             </div>
@@ -30,7 +39,7 @@
             <div class="center-column-container">
                 <div class="game-links">
                 {% for link in game.links %}
-                    <img src="{{ site.baseurl }}/assets/images/icons/{{ link.icon }}.png"> 
+                    <img src="{{ site.baseurl }}/assets/images/icons/{{ link.icon }}.png"> 
                     {% if link.url %}<a href="{{ link.url }}">{% endif %}
                     {{ link.name }}
                     {% if link.soon %}/ <strong>Coming Soon</strong>{% endif %}
