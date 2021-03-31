@@ -72,6 +72,33 @@ strong {
   margin-left: 10px;
 }
 
+a#header-sign-up {
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  right: 3px;
+  text-align: left;
+  background-color: $buttonBackgroundColor;
+  border-radius: 3px;
+  text-decoration: none;
+  color: $darkestColor;
+  font-weight: $fontWeightBold;
+  box-sizing: border-box;
+  line-height: 48px;
+  padding: 0 48px 0 20px;
+  font-size: 20px;
+}
+
+a#header-sign-up:hover {
+  background-color: $darkButtonBackgroundColor;
+}
+
+#header-sign-up img {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+}
+
 #privacy-policy-section p,
 #privacy-policy-section ul {
     text-align: justify;

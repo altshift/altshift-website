@@ -1,16 +1,19 @@
 <div id="header">
     <div id="header-socials">
         <div>
-            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/twitter-48px.png" alt="Twitter" class="header-social-icon" /></a>
-            <a href="https://fb.me/{{ site.facebook_username }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/facebook-48px.png" alt="Facebook" class="header-social-icon" /></a>
-            <a href="#" class="email-icon"><img src="{{ site.baseurl }}/assets/images/letter-48px.png" alt="Email" class="header-social-icon" /></a>
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/twitter-48px.png" alt="Join Alt Shift on Twitter" class="header-social-icon" /></a>
+            <a href="https://fb.me/{{ site.facebook_username }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/facebook-48px.png" alt="Join Alt Shift on Facebook" class="header-social-icon" /></a>
+            <a href="#" class="email-icon"><img src="{{ site.baseurl }}/assets/images/letter-48px.png" alt="Contact Alt Shift by email" class="header-social-icon" /></a>
+            {% if include.with_header_text %}
+            <a href="#contact-section" id="header-sign-up">
+                SIGN UP
+                <img src="{{ site.baseurl }}/assets/images/newsletter.png">
+            </a>
+            {% endif %}
         </div>
-        {% if include.with_header_text %}
-        <a href="#contact-section">Subscribe to our newsletter</a>
-        {% endif %}
     </div>
 
-    <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="{{ site.title }}" /></a>
+    <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="Alt Shift logo" /></a>
     <div class="subtitle">{{ site.subtitle }}</div>
     {% if include.with_header_text %}
     <div class="paragraph">Welcome! Alt Shift is an independent game studio located in the city of Montpellier, in the sunny South of France.<br />

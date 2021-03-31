@@ -1,11 +1,15 @@
 <meta charset="UTF-8" />
-{% assign title = site.title | append: " | " | append: site.subtitle %}
+{% assign title = site.title | append: " - " | append: site.subtitle %}
 {% if include.page_title %}
-{% assign title = title | append: " | " | append: include.page_title %}
+{% assign title = title | append: " - " | append: include.page_title %}
 {% endif %}
 <title>{{ title }}</title>
 <meta name="keywords" content="{{ site.keywords | join: ", "}}" />
 <meta name="description" content="{{ site.description }}" />
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:type" content="Website"/>
+<meta property="og:url" content="{{ site.url }}"/>
+<meta property="og:image" content="{{ site.url | append: site.baseurl | append: "/assets/images/alt-shift-logo-og.jpg" }}"/>
 <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/favicon.png"/>
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css" type="text/css" />
 <script type="text/javascript">
