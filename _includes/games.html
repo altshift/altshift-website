@@ -37,15 +37,15 @@
 
         <div class="game-footer">
             <div class="center-column-container">
-                <div class="game-links">
                 {% for link in game.links %}
-                    <img src="{{ site.baseurl }}/assets/images/icons/{{ link.icon }}.png"> 
-                    {% if link.url %}<a href="{{ link.url }}">{% endif %}
-                    {{ link.name }}
-                    {% if link.soon %}/ <strong>Coming Soon</strong>{% endif %}
-                    {% if link.url %}</a>{% endif %}
+                    <div class="game-links">
+                        <img src="{{ site.baseurl }}/assets/images/icons/{{ link.icon }}.png"> 
+                        {% if link.url %}<a href="{{ link.url }}">{% endif %}
+                        {{ link.name }}
+                        {% if link.soon %}/ <strong>Coming Soon</strong>{% endif %}
+                        {% if link.url %}</a>{% endif %}
+                    </div>
                 {% endfor %}
-                </div>
             </div>
         </div>
     </div>
