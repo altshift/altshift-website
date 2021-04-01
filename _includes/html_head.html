@@ -14,13 +14,6 @@
 <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/favicon.png"/>
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css" type="text/css" />
 <script type="text/javascript">
-{% include email_script.js %}
+{% include scripts/email_script.js %}
 </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71516652-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.googleanalytics_id }}');
-</script>
+{% include googleanalytics.html %}
