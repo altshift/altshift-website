@@ -1,0 +1,55 @@
+<script type="application/javascript">
+var geoipData = {
+    data: null,
+
+    isCalifornia: function() {
+        return (this.data == null) ? false : (this.data.country_code3 == 'USA' && this.data.region == 'California');
+    },
+
+    isEurope: function() {
+        return (this.data == null) ? false : (this.data.continent_code == 'EU');
+    },
+
+    isOrendaTerritory: function() {
+        if (this.data == null) {
+            return false;
+        }
+        else {
+            const orendaCountries = [ 'HKG', 'JPN', 'MYS', 'SGP', 'TWN', 'CHN' ];
+            return orendaCountries.includes(this.data.country_code3);
+        }
+    },
+
+    isChina: function() {
+        return (this.data == null) ? false : (this.data.country_code3 == 'CHN');
+    }
+};
+function geoip(json) {
+    geoipData.data = json;
+}
+</script>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
+
+<script type="application/javascript">
+function cryingSunsIOS() {
+    const humbleId = '1511788295';
+    const orendaId = '1514360059';
+    const orendaChinaId = '1518737497';
+    var id = humbleId;
+    if (geoipData.isOrendaTerritory()) {
+        id = geoipData.isChina() ? orendaChinaId : orendaId;
+    }
+    const url = `https://apps.apple.com/app/crying-suns/id${id}`;
+    window.open(url);
+    return false;
+}
+
+function cryingSunsAndroid() {
+    const humbleId = 'com.altshift.cryingsuns';
+    const orendaId = 'com.altshift.orenda.cryingsuns';
+    const id = geoipData.isOrendaTerritory() ? orendaId : humbleId;
+    const url = `https://play.google.com/store/apps/details?id=${id}`;
+    window.open(url);
+    return false;
+}
+</script>

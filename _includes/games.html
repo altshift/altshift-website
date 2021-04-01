@@ -29,7 +29,14 @@
                         {% assign store_prefix = "" %}
                     {% endif %}
                     {% assign store_alt = "Get " | append: game.short_name | append: " on " | append: store_prefix | append: store.name %}
-                    <a href="{{ store.url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/stores/{{ store.icon }}.png" alt="{{ store_alt }}" /></a>
+                    {% if store.onclick_method %}
+                        {% assign uri = "#" %}
+                        {% assign onclick = "onclick='return " | append: store.onclick_method | append: "()'" %}
+                    {% else %}
+                        {% assign uri = store.url %}
+                        {% assign onclick="" %}
+                    {% endif %}
+                    <a href="{{ uri }}" target="_blank" {{ onclick }}><img src="{{ site.baseurl }}/assets/images/stores/{{ store.icon }}.png" alt="{{ store_alt }}" /></a>
                 {% endfor %}
                 </div>
             </div>
