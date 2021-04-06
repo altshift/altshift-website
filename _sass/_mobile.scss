@@ -196,13 +196,17 @@ h4 {
   margin: 10px;
 }
 
+.game-stores img {
+  height: 64px;
+}
+
 .game-footer {
   background-color: $darkerColor;
 }
 
 .game-links {
   color: $lightColor;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: $fontWeightRegular;
 }
 
@@ -211,7 +215,7 @@ h4 {
 }
 
 .game-footer .game-links {
-  line-height: 54px;
+  line-height: 48px;
 }
 
 .game-footer .game-links img {
