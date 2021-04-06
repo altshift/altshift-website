@@ -7,12 +7,20 @@ body {
   padding: 0 24px;
 }
 
+#logo img {
+  height: 86px;
+}
+
 #header {
   position: relative;
 }
 
 #header .subtitle {
-  display: none;
+  text-align: left;
+  margin-top: 0;
+  font-weight: $fontWeightLight;
+  font-size: 20px;
+  color: $grayTextColor;
 }
 
 #header p {

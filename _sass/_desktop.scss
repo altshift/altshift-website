@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+#logo img {
+  height: 97px;
+}
+
 #header {
   position: relative;
   margin-top: 80px;
@@ -307,6 +311,10 @@ h1,
   text-align: right;
   white-space: nowrap;
   margin-left: 10px;
+}
+
+.team-member-socials a {
+  text-decoration: none;
 }
 
 .team-member-social-icon {
