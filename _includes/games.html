@@ -3,7 +3,7 @@
     <div class="game-container shadowed">
         <div class="center-column-container">
             <div class="game-splash">
-                <a href="{{ game.site_url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/games/{{ game.splash }}.png" alt="{{ game.short_name }} poster" /></a>
+                <a href="{{ game.site_url }}" target="_blank"><img src="{{ "/assets/images/games/" | append: game.splash | append: ".png" | relative_url }}" alt="{{ game.short_name }} poster" /></a>
             </div>
 
             <div class="game-data">
@@ -36,7 +36,7 @@
                         {% assign uri = store.url %}
                         {% assign onclick="" %}
                     {% endif %}
-                    <a href="{{ uri }}" target="_blank" {{ onclick }}><img src="{{ site.baseurl }}/assets/images/stores/{{ store.icon }}.png" alt="{{ store_alt }}" /></a>
+                    <a href="{{ uri }}" target="_blank" {{ onclick }}><img src="{{ "/assets/images/stores/" | append: store.icon | append: ".png" | relative_url }}" alt="{{ store_alt }}" /></a>
                 {% endfor %}
                 </div>
             </div>
@@ -46,7 +46,7 @@
             <div class="center-column-container">
                 {% for link in game.links %}
                     <div class="game-links">
-                        <img src="{{ site.baseurl }}/assets/images/icons/{{ link.icon }}.png"> 
+                        <img src="{{ "/assets/images/icons/" | append: link.icon | append: ".png" | relative_url }}"> 
                         {% if link.url %}<a href="{{ link.url }}">{% endif %}
                         {{ link.name }}
                         {% if link.soon %}/ <strong>Coming Soon</strong>{% endif %}

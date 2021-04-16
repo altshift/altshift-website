@@ -1,7 +1,7 @@
 {% capture section_content %}
     <div id="partners">
     {% for partner in site.partners %}
-        <a href="{{ partner.site_url }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/partners/{{ partner.image }}.png" alt="{{ partner.name }}" /></a>
+        <a href="{{ partner.site_url }}" target="_blank"><img src="{{ "/assets/images/partners/" | append: partner.image | append: ".png" | relative_url }}" alt="{{ partner.name }}" /></a>
     {% endfor %}
     </div>
 

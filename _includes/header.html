@@ -1,19 +1,19 @@
 <div id="header">
     <div id="header-socials">
         <div>
-            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/twitter-96px.png" alt="Join Alt Shift on Twitter" class="header-social-icon" /></a>
-            <a href="https://fb.me/{{ site.facebook_username }}" target="_blank"><img src="{{ site.baseurl }}/assets/images/facebook-96px.png" alt="Join Alt Shift on Facebook" class="header-social-icon" /></a>
-            <a href="#" class="email-icon"><img src="{{ site.baseurl }}/assets/images/letter-96px.png" alt="Contact Alt Shift by email" class="header-social-icon" /></a>
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="{{ "/assets/images/twitter-96px.png" | relative_url }}" alt="Join Alt Shift on Twitter" class="header-social-icon" /></a>
+            <a href="https://fb.me/{{ site.facebook_username }}" target="_blank"><img src="{{ "/assets/images/facebook-96px.png" | relative_url }}" alt="Join Alt Shift on Facebook" class="header-social-icon" /></a>
+            <a href="#" class="email-icon"><img src="{{ "/assets/images/letter-96px.png" | relative_url }}" alt="Contact Alt Shift by email" class="header-social-icon" /></a>
             {% if include.with_header_text %}
             <a href="#contact-section" id="header-sign-up">
                 SIGN UP
-                <img src="{{ site.baseurl }}/assets/images/newsletter.png">
+                <img src="{{ "/assets/images/newsletter.png" | relative_url }}">
             </a>
             {% endif %}
         </div>
     </div>
 
-    <a href="{{ site.baseurl }}/" id="logo"><img src="{{ site.baseurl }}/assets/images/logo.png" alt="Alt Shift logo" /></a>
+    <a href="{{ "/" | relative_url }}" id="logo"><img src="{{ "/assets/images/logo.png" | relative_url }}" alt="Alt Shift logo" /></a>
     <div class="subtitle">{{ site.subtitle }}</div>
     {% if include.with_header_text %}
     <p>Welcome! Alt Shift is an independent game studio located in the city of Montpellier, in the sunny South of France.<br />
