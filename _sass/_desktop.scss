@@ -381,6 +381,78 @@ h1,
   margin-bottom: 10px;
 }
 
+#dnt-footer,
+#cookie-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: $darkerColor;
+  color: $lightColor;
+
+  box-shadow: 0 -10px 25px rgb(0, 0, 0);
+  z-index: 1500;
+}
+
+#dnt-footer p,
+#cookie-footer p {
+  width: 70%;
+}
+
+#dnt-footer .center-column-container,
+#cookie-footer .center-column-container {
+  width: 640px;
+}
+
+#dnt-footer .buttons,
+#cookie-footer .buttons {
+  position: absolute;
+  right: 0;
+  top: -3px;
+}
+
+#dnt-footer button,
+#cookie-footer button {
+  transition: all 0.23s ease-in-out 0s;
+  font-weight: $fontWeightBold;
+  font-size: 14px;
+  border: 0 none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  padding: 5px 10px;
+  -webkit-appearance: none;
+}
+
+#dnt-footer button.ok-button,
+#cookie-footer button.ok-button {
+  background-color: $buttonBackgroundColor;
+  color: $darkColor;
+}
+
+#dnt-footer button.ok-button:hover,
+#cookie-footer button.ok-button:hover {
+  background-color: $darkButtonBackgroundColor;
+  color: $lightColor;
+}
+
+#dnt-footer button.ko-button,
+#cookie-footer button.ko-button {
+  background-color: $grayTextColor;
+  color: $darkColor;
+}
+
+#dnt-footer button.ko-button:hover,
+#cookie-footer button.ko-button:hover {
+  background-color: $darkColor;
+  color: $lightColor;
+}
+
 // -------------------
 // Mailchimp
 // -------------------

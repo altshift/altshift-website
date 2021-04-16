@@ -1,0 +1,75 @@
+<script type="text/javascript" src="{{ "/assets/js/js.cookie.js" | relative_url }}"></script>
+
+<script type="text/javascript">
+document.googleAnalyticsTrackingId = '{{ site.googleanalytics_id }}';
+
+function isDNTEnabled() {
+    var dntEnabled = false;
+    
+    if (window.doNotTrack) {
+        dntEnabled = (window.doNotTrack == '1');
+    }
+    else if (navigator.doNotTrack) {
+        dntEnabled = (navigator.doNotTrack == 'yes' || navigator.doNotTrack == '1');
+    }
+    else if (navigator.msDoNotTrack) {
+        dntEnabled = (navigation.msDoNotTrack == '1');
+    }
+    else if ('msTrackingProtectionEnabled' in window.external) {
+        dntEnabled = window.external.msTrackingProtectionEnabled();
+    }
+
+    return dntEnabled;
+}
+
+function loadGTag() {
+    // Base script
+    var script = document.createElement('script');
+    script.setAttribute('async', '');
+    script.setAttribute('src', "https://www.googletagmanager.com/gtag/js?id={{ site.googleanalytics_id }}");
+    document.head.appendChild(script);
+    
+    // Config script
+    script = document.createElement('script');
+    script.setAttribute('src', "{{ "/assets/js/gtag-config.js" | relative_url }}");
+    document.head.appendChild(script);
+}
+
+function acceptCookies(_accepted) {
+    Cookies.set('cookies-acknowledged', _accepted, { expires: 365 });
+    var cookieFooter = document.getElementById('cookie-footer');
+    cookieFooter.style.visibility = 'hidden';
+    if (_accepted) {
+        loadGTag();
+    }
+}
+
+function closeDNTNotification() {
+    Cookies.set('dnt-notification-closed', true, { expires: 365 });
+    var dntFooter = document.getElementById('dnt-footer');
+    dntFooter.style.visibility = 'hidden';
+}
+
+window.onload = function() {
+    if (isDNTEnabled()) {
+        var dntNotificationClosed = Cookies.get('dnt-notification-closed');
+        if (dntNotificationClosed === undefined) {
+            var dntFooter = document.getElementById('dnt-footer');
+            dntFooter.style.visibility = 'visible';
+        }
+    }
+    else if (geoipData.isEurope() || geoipData.isCalifornia()) {
+        var cookiesAcknowledged = Cookies.get('cookies-acknowledged');
+        if (cookiesAcknowledged === undefined) {
+            var cookieFooter = document.getElementById('cookie-footer');
+            cookieFooter.style.visibility = 'visible';
+        }
+        else if (JSON.parse(cookiesAcknowledged) === true) {
+            loadGTag();
+        }
+    }
+    else {
+        loadGTag();
+    }
+}
+</script>

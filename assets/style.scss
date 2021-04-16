@@ -44,3 +44,8 @@ strong {
 @media (max-device-width: 767px) {
   @import "_mobile";
 }
+
+#cookie-footer,
+#dnt-footer {
+  visibility: hidden;
+}
