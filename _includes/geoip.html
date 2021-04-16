@@ -30,6 +30,10 @@ var geoipData = {
 
     isChina: function() {
         return (this.data == null) ? false : (this.data.country_code3 == 'CHN');
+    },
+
+    isJapan: function() {
+        return (this.data == null) ? false : (this.data.country_code3 == 'JPN');
     }
 };
 function geoip(json) {
@@ -62,16 +66,12 @@ function cryingSunsAndroid() {
 }
 
 function notnotEShop() {
-    const euURL = 'https://www.nintendo.co.uk/Games/Nintendo-Switch-download-software/Not-Not-A-Brain-Buster-1530202.html';
-    const usaURL = 'https://www.nintendo.com/games/detail/not-not-a-brain-buster-switch/';
-    const asiaURL = 'https://store-jp.nintendo.com/list/software/70010000027797.html';
+    const defaultURL = 'https://www.nintendo.com/games/detail/not-not-a-brain-buster-switch/';
+    const japanURL = 'https://store-jp.nintendo.com/list/software/70010000027797.html';
 
-    var url = asiaURL;
-    if (geoipData.isAmerica()) {
-        url = usaURL;
-    }
-    else if (geoipData.isEurope() || geoipData.isAfrica()) {
-        url = euURL;
+    var url = defaultURL;
+    if (geoipData.isJapan()) {
+        url = japanURL;
     }
     window.open(url);
     return false;
@@ -80,13 +80,9 @@ function notnotEShop() {
 function notnotPlayStationStore() {
     const euURL = 'https://store.playstation.com/en-gb/product/EP2696-CUSA25840_00-NOTNOTPS4V100000';
     const usaURL = 'https://store.playstation.com/en-us/product/UP2833-CUSA25839_00-NOTNOTPS4V100000';
-    const asiaURL = '';
 
-    var url = asiaURL;
-    if (geoipData.isAmerica()) {
-        url = usaURL;
-    }
-    else if (geoipData.isEurope() || geoipData.isAfrica()) {
+    var url = usaURL;
+    if (geoipData.isEurope() || geoipData.isAfrica()) {
         url = euURL;
     }
     window.open(url);
