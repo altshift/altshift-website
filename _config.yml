@@ -35,7 +35,7 @@ keywords:
   - console games
   - PC games
   - Montpellier
-baseurl: "/altshift-website" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.altshift.fr" # the base hostname & protocol for your site, e.g. http://example.com
 
 exploded_email:
