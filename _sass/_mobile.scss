@@ -347,68 +347,61 @@ h4 {
   left: 0;
   right: 0;
 
-  background-color: $darkerColor;
-  color: $lightColor;
+  background-color: $lightColor;
+  color: $darkerColor;
 
-  box-shadow: 0 -10px 25px rgb(0, 0, 0);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.75);
   z-index: 1500;
-}
 
-#dnt-footer p,
-#cookie-footer p {
-  text-align: center;
-  font-size: 20px;
-}
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
 
-#dnt-footer .buttons,
-#cookie-footer .buttons {
-  padding-bottom: 20px;
-  text-align: center;
-}
+  .buttons {
+    padding-bottom: 20px;
+    text-align: center;
+  }
 
-#dnt-footer button,
-#cookie-footer button {
-  transition: all 0.23s ease-in-out 0s;
-  font-weight: $fontWeightBold;
-  font-size: 20px;
-  border: 0 none;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  height: 100%;
-  margin: 0;
-  text-align: center;
-  white-space: nowrap;
-  padding: 15px 20px;
-  -webkit-appearance: none;
-}
+  button {
+    transition: all 0.23s ease-in-out 0s;
+    font-weight: $fontWeightBold;
+    font-size: 20px;
+    border: 0 none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    padding: 15px 20px;
+    -webkit-appearance: none;
 
-#cookie-footer button:first-child {
-  margin-right: 20px;
-}
+    &:first-child {
+      margin-right: 20px;
+    }
 
-#dnt-footer button.ok-button,
-#cookie-footer button.ok-button {
-  background-color: $buttonBackgroundColor;
-  color: $darkColor;
-}
+    &.ok-button {
+      background-color: $buttonBackgroundColor;
+      color: $darkColor;
 
-#dnt-footer button.ok-button:hover,
-#cookie-footer button.ok-button:hover {
-  background-color: $darkButtonBackgroundColor;
-  color: $lightColor;
-}
+      &:hover {
+        background-color: $darkButtonBackgroundColor;
+        color: $lightColor;
+      }
+    }
 
-#dnt-footer button.ko-button,
-#cookie-footer button.ko-button {
-  background-color: $grayTextColor;
-  color: $darkColor;
-}
+    &.ko-button {
+      background-color: $grayTextColor;
+      color: $darkColor;
 
-#dnt-footer button.ko-button:hover,
-#cookie-footer button.ko-button:hover {
-  background-color: $darkColor;
-  color: $lightColor;
+      &:hover {
+        background-color: $darkColor;
+        color: $lightColor;
+      }
+    }
+  }
 }
 
 // -------------------
