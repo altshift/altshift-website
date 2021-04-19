@@ -23,8 +23,18 @@ subtitle: Indie Game Studio
 description: >- # this means to ignore newlines until "baseurl:"
   Alt Shift is an indie game studio located in Montpellier (France), known for the puzzle game Not Not - A Brain-Buster and the space roguelite Crying Suns.
 keywords:
-  - toto
-  - tata
+  - Independent game studio
+  - indie games
+  - Crying Suns
+  - CryingSuns
+  - CryingSun
+  - Not Not
+  - NotNot
+  - puzzle games
+  - mobile games
+  - console games
+  - PC games
+  - Montpellier
 baseurl: "/altshift-website" # the subpath of your site, e.g. /blog
 url: "https://www.altshift.fr" # the base hostname & protocol for your site, e.g. http://example.com
 
