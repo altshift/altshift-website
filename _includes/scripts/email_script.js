@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('load', function() {
     const emailComponents = [ '{{ site.exploded_email[0] }}', '{{ site.exploded_email[1] }}', '{{ site.exploded_email[2] }}' ];
     const emailIconLinks = document.getElementsByClassName('email-icon');
     for (const iconLink of emailIconLinks) {
@@ -8,4 +8,4 @@ window.onload = function() {
             location.href = rightEmail;
         });
     }
-};
+});
