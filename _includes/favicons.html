@@ -1,0 +1,9 @@
+{% for size in site.apple_favicons %}
+<link rel="apple-touch-icon" sizes="{{ size }}x{{ size }}" href="/assets/images/favicons/favicon-{{ size }}.png">
+{% endfor %}
+{% for size in site.favicons %}
+<link rel="icon" type="image/png" sizes="{{ size }}x{{ size }}" href="/assets/images/favicons/favicon-{{ size }}.png">
+{% endfor %}
+<link rel="manifest" href="/assets/images/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="{{ site.ms_favicon_color }}">
+<meta name="msapplication-TileImage" content="/assets/images/favicons/favicon-{{ site.ms_favicon_size }}.png">

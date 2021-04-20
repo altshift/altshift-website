@@ -52,6 +52,24 @@ collections:
   - games
   - team_members
   - partners
+
+apple_favicons:
+  - 57
+  - 60
+  - 72
+  - 76
+  - 114
+  - 120
+  - 144
+  - 152
+  - 180
+favicons:
+  - 16
+  - 32
+  - 96
+  - 192
+ms_favicon_color: "#202020"
+ms_favicon_size: 144
 # Build settings
 
 # Exclude from processing.
