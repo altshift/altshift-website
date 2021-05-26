@@ -65,6 +65,22 @@ function cryingSunsAndroid() {
     return false;
 }
 
+function cryingSunsEShop() {
+    const usaURL = 'https://www.nintendo.com/games/detail/crying-suns-switch/';
+    const europeURL = 'https://www.nintendo.co.uk/Games/Nintendo-Switch-download-software/Crying-Suns-1967872.html';
+    const japanURL = 'https://store-jp.nintendo.com/list/software/70010000040697.html';
+
+    var url = usaURL;
+    if (geoipData.isJapan()) {
+        url = japanURL;
+    }
+    else if (geoipData.isEurope()) {
+        url = europeURL;
+    }
+    window.open(url);
+    return false;
+}
+
 function notnotEShop() {
     const defaultURL = 'https://www.nintendo.com/games/detail/not-not-a-brain-buster-switch/';
     const japanURL = 'https://store-jp.nintendo.com/list/software/70010000027797.html';
