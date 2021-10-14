@@ -1,4 +1,8 @@
-<div class="team-member">
+{% assign additional_class = "team-member-small" %}
+{% if member.twitter_handle and member.linkedin_username %}
+    {% assign additional_class = "" %}
+{% endif %}
+<div class="team-member {{ additional_class }}">
     <div class="team-member-identity">
         <div class="team-member-name">{{ member.name }}</div>
         <div class="team-member-title">{{ member.title }}</div>
