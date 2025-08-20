@@ -2,15 +2,26 @@
 {% if member.twitter_handle and member.linkedin_username %}
     {% assign additional_class = "" %}
 {% endif %}
+{% if member.twitter_handle and member.bluesky_handle %}
+    {% assign additional_class = "" %}
+{% endif %}
+{% if member.bluesky_handle and member.linkedin_username %}
+    {% assign additional_class = "" %}
+{% endif %}
 <div class="team-member {{ additional_class }}">
     <div class="team-member-identity">
-        <div class="team-member-name">{{ member.name }}</div>
+        <div class="team-member-name">{{ member.name }}</div>
         <div class="team-member-title">{{ member.title }}</div>
 
         <div class="team-member-socials">
             {% if member.twitter_handle %}
             <a href="https://twitter.com/{{ member.twitter_handle }}" target="_blank">
                 <img class="team-member-social-icon" src="{{ "/assets/images/twitter-96px.png" | relative_url }}" alt="Twitter">
+            </a>
+            {% endif %}
+            {% if member.bluesky_handle %}
+            <a href="https://https://bsky.app/profile/{{ member.bluesky_handle }}" target="_blank">
+                <img class="team-member-social-icon" src="{{ "/assets/images/bluesky-96px.png" | relative_url }}" alt="Blue Sky">
             </a>
             {% endif %}
             {% if member.linkedin_username %}
