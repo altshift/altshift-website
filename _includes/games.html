@@ -8,16 +8,23 @@
 
             <div class="game-data">
                 <h2 class="game-title">{{ game.name }}</h2>
-                <div class="game-description">{{ game.content }}</div>
+                <div class="game-description">{{ game.content }}</div>
                 <div class="game-links">
-                    <a href="{{ game.site_url }}" target="_blank">{{ game.short_url }}</a> / <a href="{{ game.presskit_url }}" target="_blank">Presskit</a>
+                    {% if game.site_url %}<a href="{{ game.site_url }}" target="_blank">{{ game.short_url }}</a>{% endif %}
+                    {% if game.site_url and game.presskit_url %} / {% endif %}
+                    {% if game.presskit_url %}<a href="{{ game.presskit_url }}" target="_blank">Presskit</a>{% endif %}
                 </div>
             </div>
         </div>
 
+        {% if game.stores %}
         <div class="game-store-container">
             <div class="center-column-container">
+                {% if game.stores_prefix %}
+                {{ game.stores_prefix }}
+                {% else %}
                 Available on:
+                {% endif %}
                 <div class="game-stores">
                 {% for store in game.stores %}
                     {% assign store_prefix = " the " %}
@@ -41,6 +48,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
 
         <div class="game-footer">
             <div class="center-column-container">

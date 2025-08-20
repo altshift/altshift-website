@@ -104,4 +104,28 @@ function notnotPlayStationStore() {
     window.open(url);
     return false;
 }
+
+function notnot2EShop() {
+    const defaultURL = 'https://www.nintendo.com/us/store/products/not-not-2-a-brain-challenge-switch/';
+    
+    var url = defaultURL;
+    if (geoipData.isJapan()) {
+        alert("Coming soon!");
+        return;
+    }
+    window.open(url);
+    return false;
+}
+
+function notnot2PlayStationStore() {
+    const euURL = 'https://store.playstation.com/en-gb/product/EP2696-CUSA54907_00-0000000000000000';
+    const usaURL = 'https://store.playstation.com/en-us/product/UP2833-CUSA54908_00-5000000000000000';
+
+    var url = usaURL;
+    if (geoipData.isEurope() || geoipData.isAfrica()) {
+        url = euURL;
+    }
+    window.open(url);
+    return false;
+}
 </script>
